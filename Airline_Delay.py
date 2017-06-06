@@ -30,6 +30,8 @@ from sklearn.preprocessing import OneHotEncoder
 onehotencoder = OneHotEncoder(categorical_features = [1,2,3,4])#select column to be encoded
 X=onehotencoder.fit_transform(X).toarray()  #fit X to array"""
 
+#Avoid Dummy variable Trap
+X = X[:,1:]
 
 #split training and test set
 from sklearn.cross_validation import train_test_split
