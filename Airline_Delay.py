@@ -19,8 +19,8 @@ Y = dataset.iloc[:,8].values
 #take care of missing data
 from sklearn.preprocessing import Imputer
 imputer = Imputer(missing_values = 0, strategy='most_frequent', axis=0) # created object of class imputer
-imputer.fit(X[:,1:9]) #fit imputer in size of X
-X[:,1:9] = imputer.transform(X[:,1:9])# add mean to the x matrix
+imputer.fit(X[:,1:8]) #fit imputer in size of X
+X[:,1:8] = imputer.transform(X[:,1:8])# add mean to the x matrix
 imputer1 = Imputer(missing_values = 0, strategy='most_frequent', axis=0)
 imputer1.fit(Y[:]) #fit imputer in size of X
 Y[:] = imputer1.transform(Y[:])# add mean to the x matrix
